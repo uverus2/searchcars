@@ -1,51 +1,42 @@
 <?php  
 
- echo " <link rel='stylesheet' type='text/css' href='theme.css'>";
+ 
     
-    $a = $_GET["name"];
-    $b = $_GET["pass"];
-    $d = $_GET["date"];
+    $firstName = $_GET["firstName"];  // variable does not need to be the same as get name fild
+    $surName = $_GET["surName"];
+    $email = $_GET["email"];
+    $password = $_GET["password"];
+    $date = $_GET["date"];
+
+    $array = explode("-",$date);
+    $getDa = getDate();
+    $dateYe = $getDa["year"];
     
-    $array = explode("-",$d);
-    $date = getDate();
-    $dateYe = $date["year"];
-    
-    if ($dateYe <= 18) {
+    if ($firstName == "" && $surName == "" && $email == "" && $password == "" && $date == ""){
+
+        echo "Enter the detail required </br> ";
         
-        echo  "not old enougth </br>";
+    }
+    elseif ($firstName == "" && $surName == "") {
+          echo "Enter First Name and Second Name </br>";
+        
+    }
+    elseif ($email == "" ) {
+          echo "Enter Email ";
+        
+    }
+    
+    elseif ($password == "" ) {
+          echo "Enter Password ";
         
     }
     else {
-        
-        echo "old enought </br>";
+        header('Location:login.html');
     }
     
-    if ($a == "" && $b == "" && $d == ""){
-        
-        echo "Enter Password and Name </br> ";
-        
-    }
-    elseif ($a == "" ) {
-          echo "enter First Name </br>";
-        
-    }
-    elseif ($b == "" ) {
-          echo "enter date of birth ";
-        
-    }
     
-    elseif ($b == "" ) {
-          echo "enter password ";
-        
-    }
-    else {
-    echo "found name $a </br> ";
-    echo "found  pass $b </br>";
-    echo "found age $d ";
-    }
-    
-  $conn = new PDO ("mysql:host=localhost;dbname=ephp045;", "ephp045", "eesoongo");
-  $results = $conn->query("INSERT INTO users (Username,Password,Date) VALUES ('$a' , '$b' , '$d')");
+  $conn = new PDO ("mysql:host=localhost;dbname=users;", "root");
+  $results = $conn->query("INSERT INTO users (first_name,surname,email,password,date) VALUES ('$firstName' , '$surName' , '$email','$password' ,'$date')");
   
 
    
