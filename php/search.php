@@ -2,6 +2,7 @@
    
    $di= $_GET["car"];
    
+   
     
     $conn = new PDO ("mysql:host=localhost;dbname=cars;", "root");
     

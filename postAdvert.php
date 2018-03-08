@@ -9,9 +9,12 @@ session_start();
     $miles= $_POST["miles"];
 
 
+    print_r($_POST);
     
     $conn = new PDO ("mysql:host=localhost;dbname=cars;", "root");
-    $results = $conn->query(" INSERT INTO cars (Brand,Model,year,price,miles) VALUES ('$brand' , '$model','$year','$price','$miles'");
+    $results = $conn->query(" INSERT INTO cars (Brand,Model,year,price,miles) VALUES ('$brand' , '$model','$year','$price','$miles')");
+
+    print_r($conn->errorInfo());
     
 
    

@@ -36,7 +36,7 @@ else
 
         <div class="form-style-6">
             <h1>Enter SearchCars.com</h1>
-            <form method="get" action="postAdvert.php">
+            <form method="post" action="postAdvert.php">
 
 
                 <input  type="text"   name="brand" placeholder="Enter Brand" required />
