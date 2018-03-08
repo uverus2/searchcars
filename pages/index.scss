@@ -102,8 +102,12 @@ aside {
     margin-top: 2%;
     background: url('../images/car.jpg') no-repeat center center;
     background-size: cover;
-    height: 650px;
+    height: 655px;
     width: 100%;
     max-width: 100%;
     clear: both;
+}
+
+#myDIV {
+    display: none;
 }
