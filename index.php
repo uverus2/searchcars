@@ -1,5 +1,6 @@
 <?php
 session_start();
+$session = $_SESSION["gatekeeper"];
 // Test that the authentication session variable exists
 if ( !isset ($_SESSION["gatekeeper"]))
 {
@@ -7,7 +8,12 @@ if ( !isset ($_SESSION["gatekeeper"]))
 }
 else
 {    
-    echo "You're logged in as ".$_SESSION["gatekeeper"];
+    $conn = new PDO ("mysql:host=localhost;dbname=users;", "root");
+    $results = $conn->query("select first_name, surname from users where email = '$session'  ");
+    $row=$results->fetch();
+    echo " <p class='profile'> Welcome ".$row["first_name"]." ".$row["surname"]."</p>" ;
+    
+
     ?>
     
 
@@ -29,6 +35,11 @@ else
 
 <body>
 
+
+    
+    <a href="logout.php" class="left" >Logout</a>
+    <a href="post.php" class="left" >Post</a>
+    
     <nav>
         <ul id="menu-closed">
             <li>/<a href="index.php">home</a></li>
@@ -38,8 +49,7 @@ else
 
     </nav>
 
-    <a href="logout.php">Logout</a>
-    <a href="post.php">Post</a>
+   
 
     <section>
 
