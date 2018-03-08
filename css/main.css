@@ -182,7 +182,7 @@ li {
 
 nav {
   float: left;
-  margin-top: 2%; }
+  margin-top: 1%; }
 
 li:hover {
   font-size: 50px; }
@@ -209,6 +209,30 @@ aside {
   width: 100%;
   max-width: 100%;
   clear: both; }
+
+.left {
+  float: right;
+  font-size: 17px;
+  padding: 7px 12px;
+  background: #fff;
+  border: 1px solid #009688;
+  margin: 2% 5px;
+  margin-right: 12px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  min-width: 120px;
+  text-align: center; }
+
+.left:hover {
+  color: #fff;
+  background: #009688; }
+
+.profile {
+  margin-right: 120px;
+  font-size: 15px;
+  margin-top: 0%;
+  height: 15px; }
 
 .form-style-6 {
   font: 95% Arial, Helvetica, sans-serif;
