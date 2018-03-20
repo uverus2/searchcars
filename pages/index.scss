@@ -1,148 +1,145 @@
-span {
-    color: #ff0000;
-    font-size: 70px;
-    font-weight: normal;
-    animation-name: logo;
+    span {
+        color: #ff0000;
+        font-size: 70px;
+        font-weight: normal;
+        animation-name: logo;
+        /* The element to apply the animation to */
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-delay: 10s;
+    }
     /* The element to apply the animation to */
-    animation-duration: 15s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-delay: 10s;
-}
-
-
-/* The element to apply the animation to */
-
-@keyframes logo {
-    25% {
-        color: #990000;
+    
+    @keyframes logo {
+        25% {
+            color: #990000;
+        }
+        50% {
+            color: #660000;
+        }
+        75% {
+            color: #330000;
+        }
+        100% {
+            color: black;
+        }
     }
-    50% {
-        color: #660000;
+    
+    .find {
+        color: red;
+        font-size: 60px;
+        font-weight: normal;
+        text-shadow: none;
     }
-    75% {
-        color: #330000;
+    
+    section {
+        width: 100%;
+        padding-top: 1%;
+        clear: both;
     }
-    100% {
+    
+    h1 {
+        font-size: 60px;
+        font-weight: lighter;
+        margin-bottom: 0%;
+    }
+    
+    input {
+        width: 700px;
+        height: 46px;
+        font-size: 20px;
+    }
+    
+    .search {
+        margin-left: 30%;
+        background: url('');
+    }
+    
+    a {
+        text-decoration: none;
         color: black;
     }
-}
-
-.find {
-    color: red;
-    font-size: 60px;
-    font-weight: normal;
-    text-shadow: none;
-}
-
-section {
-    width: 100%;
-    padding-top: 1%;
-    clear: both;
-}
-
-h1 {
-    font-size: 60px;
-    font-weight: lighter;
-    margin-bottom: 0%;
-}
-
-input {
-    width: 700px;
-    height: 46px;
-    font-size: 20px;
-}
-
-.search {
-    margin-left: 30%;
-    background: url('');
-}
-
-a {
-    text-decoration: none;
-    color: black;
-}
-
-ul {
-    list-style-type: none;
-    font-size: 30px;
-}
-
-li {
-    display: inline;
-}
-
-nav {
-    float: left;
-    margin-top: 1%;
-}
-
-li:hover {
-    font-size: 50px;
-}
-
-a:hover {
-    color: red;
-}
-
-.submit {
-    width: 50px;
-    height: 50px;
-    margin-bottom: -1.5%;
-    margin-left: 0.8%;
-}
-
-.submit:hover {
-    width: 54px;
-    height: 53px;
-    background: rgba(255, 0, 0, 1);
-}
-
-aside {
-    margin-top: 2%;
-    background: url('../images/car.jpg') no-repeat center center;
-    background-size: cover;
-    height: 655px;
-    width: 100%;
-    max-width: 100%;
-    clear: both;
-}
-
-<<<<<<< HEAD
-#myDIV {
-    display: none;
-=======
-.left {
-    float: right;
-    font-size: 17px;
-    padding: 7px 12px;
-    background: #fff;
-    border: 1px solid #990000;
-    ;
-    margin: 2% 5px;
-    margin-right: 12px;
-    display: inline-block;
-    text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
-    min-width: 120px;
-    text-align: center;
-}
-
-.left:hover {
-    color: #fff;
-    font-size: 20px;
-    background: rgba(228, 14, 14, 0.89);
-    ;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    height: 23px;
-    transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
-    width: 80px;
-}
-
-.profile {
-    margin-right: 120px;
-    font-size: 15px;
-    margin-top: 0%;
-    height: 15px;
->>>>>>> f6a4cc1c8d41513f821dd91e655b147cd0a04d40
-}
+    
+    ul {
+        list-style-type: none;
+        font-size: 30px;
+    }
+    
+    li {
+        display: inline;
+    }
+    
+    nav {
+        float: left;
+        margin-top: 1%;
+    }
+    
+    li:hover {
+        font-size: 50px;
+    }
+    
+    a:hover {
+        color: red;
+    }
+    
+    .submit {
+        width: 50px;
+        height: 50px;
+        margin-bottom: -1.5%;
+        margin-left: 0.8%;
+    }
+    
+    .submit:hover {
+        width: 54px;
+        height: 53px;
+        background: rgba(255, 0, 0, 1);
+    }
+    
+    aside {
+        margin-top: 2%;
+        background: url('../images/car.jpg') no-repeat center center;
+        background-size: cover;
+        height: 655px;
+        width: 100%;
+        max-width: 100%;
+        clear: both;
+    }
+    
+    #myDIV {
+        display: none;
+    }
+    
+    .lefts {
+        float: right;
+        font-size: 17px;
+        padding: 7px 12px;
+        background: #fff;
+        border: 1px solid #990000;
+        ;
+        margin: 2% 5px;
+        margin-right: 12px;
+        display: inline-block;
+        text-decoration: none;
+        font-family: 'Open Sans', sans-serif;
+        min-width: 120px;
+        text-align: center;
+    }
+    
+    .lefts:hover {
+        color: #fff;
+        font-size: 20px;
+        background: rgba(228, 14, 14, 0.89);
+        ;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        height: 23px;
+        transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
+        width: 80px;
+    }
+    
+    .profile {
+        margin-right: 120px;
+        font-size: 15px;
+        margin-top: 0%;
+        height: 15px;
+    }

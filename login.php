@@ -5,7 +5,7 @@ $passwords = $_POST["password"];
 
 session_start();
 
-$conn = new PDO ("mysql:host=localhost;dbname=users;", "root");
+$conn = new PDO ("mysql:host=localhost;dbname=users;", "root", '123456' );
 $results = $conn->query
 ("select * from users where email = '$usernames' AND password = '$passwords'");
  
@@ -16,6 +16,7 @@ if ($loginRow != false)
 {
 
         $_SESSION["gatekeeper"] = $usernames;
+        $_SESSION["isadmin"] = $loginRow["admin"];
         header("Location: index.php");
 
 }

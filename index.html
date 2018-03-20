@@ -12,7 +12,10 @@
     <!-- endbuild -->
 </head>
 
-<body>
+<body onload="mainOne()">
+
+    <a href="login.html" class="lefts">Sign In</a>
+
 
     <nav>
         <ul id="menu-closed">
@@ -41,14 +44,20 @@
             <form id="myDIV" action="choice.php" method="get">
 
                 <select name="choice">
-                        
+
                       <option value="brand">Brand</option>
                       <option value="model">Model</option>
-                      
-                      
+
+
                 </select>
 
                 <input type="text" name="search" placeholder="Search" />
+
+                <input type="checkbox" name="brands" value="Bike"> Brand<br>
+                <input type="checkbox" name="models" value="Bike"> Model<br>
+                <input type="checkbox" name="years" value="Car"> Year<br>
+                <input type="checkbox" name="prices" value="Car"> Price<br>
+                <input type="checkbox" name="miless" value="Bike"> Miles<br>
 
                 <input type="submit">
 

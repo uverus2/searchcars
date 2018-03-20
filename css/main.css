@@ -210,11 +210,10 @@ aside {
   max-width: 100%;
   clear: both; }
 
-<<<<<<< HEAD
 #myDIV {
   display: none; }
-=======
-.left {
+
+.lefts {
   float: right;
   font-size: 17px;
   padding: 7px 12px;
@@ -228,7 +227,7 @@ aside {
   min-width: 120px;
   text-align: center; }
 
-.left:hover {
+.lefts:hover {
   color: #fff;
   font-size: 20px;
   background: rgba(228, 14, 14, 0.89);
@@ -242,7 +241,6 @@ aside {
   font-size: 15px;
   margin-top: 0%;
   height: 15px; }
->>>>>>> f6a4cc1c8d41513f821dd91e655b147cd0a04d40
 
 .form-style-6 {
   font: 95% Arial, Helvetica, sans-serif;

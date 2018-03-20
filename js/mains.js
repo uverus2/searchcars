@@ -2,6 +2,7 @@
 function mainTwo() {
     land();
 }
+
 var left = document.querySelector('.left');
 var right = document.querySelector('.right');
 var wrap = document.querySelector('.wrap');

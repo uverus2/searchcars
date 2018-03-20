@@ -11,7 +11,7 @@ session_start();
 
     print_r($_POST);
     
-    $conn = new PDO ("mysql:host=localhost;dbname=cars;", "root");
+    $conn = new PDO ("mysql:host=localhost;dbname=cars;", "root" , '123456');
     $results = $conn->query(" INSERT INTO cars (Brand,Model,year,price,miles) VALUES ('$brand' , '$model','$year','$price','$miles')");
 
     print_r($conn->errorInfo());

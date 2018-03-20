@@ -4,7 +4,7 @@
    
    
     
-    $conn = new PDO ("mysql:host=localhost;dbname=cars;", "root");
+    $conn = new PDO ("mysql:host=localhost;dbname=cars;", "root" , '123456');
     
     if ($di=="") {
         
@@ -28,6 +28,7 @@ while($row=$results->fetch())
     echo " Year " .$row["year"]. "<br/>" ; 
     echo " Miles " . $row["miles"] . "<br/> " ;  
     echo "</p>";
+    echo "<a href='testDrive.php?ID=" . $row["ID"] . "'> Book a Test Drive </a><br />";
 }  
 
 

@@ -8,7 +8,7 @@ if ( !isset ($_SESSION["gatekeeper"]))
 }
 else
 {    
-    $conn = new PDO ("mysql:host=localhost;dbname=users;", "root");
+    $conn = new PDO ("mysql:host=localhost;dbname=users;", "root", '123456');
     $results = $conn->query("select first_name, surname from users where email = '$session'  ");
     $row=$results->fetch();
     echo " <p class='profile'> Welcome ".$row["first_name"]." ".$row["surname"]."</p>" ;
@@ -37,8 +37,8 @@ else
 
 
     
-    <a href="logout.php" class="left" >Logout</a>
-    <a href="post.php" class="left" >Post</a>
+    <a href="logout.php" class="lefts" >Logout</a>
+    <a href="post.php" class="lefts" >Post</a>
     
     <nav>
         <ul id="menu-closed">

@@ -35,8 +35,8 @@
     }
     
     
-  $conn = new PDO ("mysql:host=localhost;dbname=users;", "root");
-  $results = $conn->query("INSERT INTO users (first_name,surname,email,password,date) VALUES ('$firstName' , '$surName' , '$email','$password' ,'$date')");
+  $conn = new PDO ("mysql:host=localhost;dbname=users;", "root" , '123456');
+  $results = $conn->query("INSERT INTO users (first_name,surname,email,password,date,admin) VALUES ('$firstName' , '$surName' , '$email','$password' ,'$date',0)");
   
 
    

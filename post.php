@@ -5,16 +5,18 @@ echo "<link rel='stylesheet' href='css/main.css'>";
 
 
 
+
 $session = $_SESSION["gatekeeper"];
 // Test that the authentication session variable exists
 if ( !isset ($_SESSION["gatekeeper"]))
 {
     echo "You're not logged in. Go away!";
+   ;
 }
 else
 {
 
-    $conn = new PDO ("mysql:host=localhost;dbname=users;", "root");
+    $conn = new PDO ("mysql:host=localhost;dbname=users;", "root" , '123456');
     $results = $conn->query("select first_name, surname from users where email = '$session'  ");
     $row=$results->fetch();
     echo " Welcome ".$row["first_name"]." ".$row["surname"]."" ;
@@ -44,6 +46,8 @@ else
                 <input  type="number" name="year" placeholder="Enter Year" required />
                 <input  type="number" name="price" placeholder="Enter Price" required />
                 <input  type="number" name="miles" placeholder="Enter Miles" required />
+
+            
                 
                 
                 <input type="Submit" value="Post Advert" />
@@ -52,7 +56,10 @@ else
 
             </form>
 
+            
         </div>
+
+      
 
 
     </body>
@@ -65,10 +72,10 @@ else
 <?php
 }
 
-
-
-
-
+ if(isset($_SESSION["isadmin"]) && $_SESSION["isadmin"]== "1")
+{
+    echo " <a href='index.html'> Link </a> ";
+}
 
 
 ?>
