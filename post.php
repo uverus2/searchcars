@@ -72,9 +72,9 @@ else
 <?php
 }
 
- if(isset($_SESSION["isadmin"]) && $_SESSION["isadmin"]== "1")
+ if(isset($_SESSION["isadmin"]) && $_SESSION["isadmin"] == 1 )
 {
-    echo " <a href='index.html'> Link </a> ";
+    echo " <a href='remove.php'> Remove A Post </a> ";
 }
 
 

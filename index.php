@@ -43,7 +43,7 @@ else
     <nav>
         <ul id="menu-closed">
             <li>/<a href="index.php">home</a></li>
-            <li>/<a href="login.html">about</a></li>
+            <li>/<a href="login.html">log in</a></li>
             <li>/<a href="find.html">contact</a></li>
             <ul>
 
