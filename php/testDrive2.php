@@ -9,6 +9,7 @@ else{
 
     $conn = new PDO ("mysql:host=localhost;dbname=cars;", "root" , '123456');
     $conns = new PDO ("mysql:host=localhost;dbname=users;", "root" , '123456');
+   
 
     $bookTime = $_POST["booking"];
     $carID = $_POST["userID"];
@@ -19,7 +20,10 @@ else{
     $userID = $user["ID"];
 
     $results = $conn->query("SELECT ts.car_ID, ts.date,ts.time, ts.ID, cr.Brand , cr.Model FROM testdrive ts INNER JOIN cars cr ON ts.car_ID = cr.ID");
-    //$row=$results->fetch();
+
+    $selectBook = $conn->query("SELECT * FROM testdrive WHERE time = '$bookTime' AND date='$date'  ");
+    $getBooking = $selectBook->fetch();
+    
     while($row = $results->fetch())
         {
             echo"<p>";
@@ -30,8 +34,8 @@ else{
         }
 
 
-    if ($date == $row["date"] && $bookTime == $row["time"]) {
-     echo "Slot Taken Please Select Different Time on the Date";
+    if ( $getBooking!==false ) {
+     echo "slot taken please select different time on the date";
     }
     else {
 
